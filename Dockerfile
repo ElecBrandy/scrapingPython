@@ -1,5 +1,6 @@
 FROM python:3.11.4
 
+WORKDIR /usr/src
 RUN apt-get update && apt-get install -y wget gnupg2
 
 # 크롬 브라우저 설치
