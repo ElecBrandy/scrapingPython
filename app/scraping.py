@@ -9,9 +9,6 @@ import time
 import re
 import os
 
-# tabulate 한글깨짐 방지
-# tabulate.WIDE_CHARS_MODE = False
-
 # ------------------------------------ ↓↓↓ Selenium Firefox 설정 ↓↓↓ ------------------------------------ #
 # headless mode 사용
 options = webdriver.FirefoxOptions()
@@ -37,16 +34,15 @@ driver = webdriver.Firefox(options=options)
 
 
 # ------------------------------------ ↓↓↓ 함수 설정 ↓↓↓ ------------------------------------ #
-
 def getSubtitle(ID):
+
     # 동영상의 자막 정보 조회
     transcript_list = YouTubeTranscriptApi.list_transcripts(ID)
 
     # 한국어 (ko) 자막 가져오기
     korean_transcript = transcript_list.find_transcript(['ko']).fetch()
 
-    # korean_transcript 변수에 한국어 자막 내용 저장
-    print(korean_transcript)
+    return korean_transcript
 
 def searchKeywords(keyword, data_dict):
     # 키워드 공백 처리 + url 생성
@@ -61,39 +57,50 @@ def searchKeywords(keyword, data_dict):
     html_source = driver.page_source
     soup_source = BeautifulSoup(html_source, 'html.parser')
 
-    # 쇼츠 정보 삭제
-    soup_source.find('ytd-reel-shelf-renderer', class_='style-scope ytd-item-section-renderer').decompose()
-    
     # 콘텐츠 모든 정보
-    content_total = soup_source.find_all(class_ = 'yt-simple-endpoint style-scope ytd-video-renderer')
+    content_total = soup.find_all('a', id='video-title')
+    
+    # # Youtube 쇼츠 정보 삭제
+    # soup_source.find('ytd-reel-shelf-renderer').decompose()
+
     # 콘텐츠 제목만 추출
-    content_total_title = list(map(lambda data: data.get_text().replace("\n", ""), content_total))
+    # content_total_title = list(map(lambda data: data.get_text().replace("\n", ""), content_total))
+    content_total_title = list(soup.find('a', id='video-title').text)
     # 콘텐츠 링크만 추출
     content_total_link = list(map(lambda data: "https://youtube.com" + data["href"], content_total))
     # 조회수 및 업로드 날짜 추가
     content_record_src = soup_source.find_all(class_ = 'inline-metadata-item style-scope ytd-video-meta-block')
     
-    content_view_cnt = [record.get_text() for record in content_record_sr[::2]]
+    content_view_cnt = [record.get_text() for record in content_record_src[::2]]
     content_upload_date = [record.get_text() for record in content_record_src[1::2]]
 
     # 데이터 딕셔너리에 추가
     for title, link, view, upload_date in zip(content_total_title, content_total_link, content_view_cnt, content_upload_date):
-        if "https://youtube.com/shorts" in link:
-            continue  # shorts 링크인 경우 건너뜀
-        data_dict['title'].append(title)
+        data_dict['내용'].append(title)
         data_dict['link'].append(link)
         data_dict['view'].append(view)
         data_dict['upload_date'].append(upload_date)
+    
+    # for link in data_dict['link']:
+    #     ID = link[28:39]
+    #     result = getSubtitle(ID)  # a 함수 호출
+    #     data_dict['상세내용'].append(result)
 
+    # 빈 열에 '0' 임시 처방    
+    for key in data_dict:
+        if not data_dict[key]:
+            data_dict[key] = ["0"] * len(data_dict['upload_date'])
     df = pd.DataFrame(data_dict)
     return df
-
 # ------------------------------------ ↑↑↑ 함수 설정 ↑↑↑ ------------------------------------ #
 
 # 빈 딕셔너리 생성
-content_total_dict = {'title': [], 'link': [], 'view': [], 'upload_date': []}
+print("빈 딕셔너리 생성")
+content_total_dict = {'주제': [], '내용': [], '상세내용': [], '주장/검증매체': [], 'label': [], 'link': [], 'view': [], 'upload_date': []}
 
+print("주제설정")
 t = "아이폰"
+
 tt = searchKeywords(t, content_total_dict)
 # print(tabulate(tt, headers='keys', tablefmt='fancy_outline'))
 # CSV 파일로 저장
@@ -103,19 +110,3 @@ tt.to_csv(csv_filename, index=True, index_label='row_data')
 
 print(f"데이터가 {csv_filename} 파일로 저장되었습니다.")
 
-# # 4. 스크립트만 추출하기
-# elements = driver.find_elements(By.CSS_SELECTOR, "html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy div#panels.style-scope.ytd-watch-flexy ytd-engagement-panel-section-list-renderer.style-scope.ytd-watch-flexy")
-# try:
-#     print("클릭완료!")
-# except:
-#     print("실패!")
-# finally:
-#     driver.quit()
-# # 찾은 요소들의 텍스트 출력
-# for element in elements:
-
-# elements = driver.find_elements(By.XPATH, "/html/body/ytd-app/div[1]/ytd-page-manager/ytd-watch-flexy/div[5]/div[1]/div/div[2]/ytd-watch-metadata/div/div[2]/div[2]/div/div/ytd-menu-renderer/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]")
-# print(elements)
-
-
-# Close the browserdriver.quit()
