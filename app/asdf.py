@@ -56,6 +56,7 @@ def searchKeywords(keyword, data_dict):
         driver.find_element(By.CSS_SELECTOR, '.yt-spec-button-shape-next--icon-trailing > yt-touch-feedback-shape:nth-child(3) > div:nth-child(1)').click()
         time.sleep(5)
 
+        # ------------------------------------ ↓↓↓ 조회수 순 정렬 ↓↓↓ ------------------------------------ #
         # 새로운 요소가 나타날 때까지 대기
         wait = WebDriverWait(driver, 30)
         new_element = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'tp-yt-paper-dialog.style-scope')))
@@ -64,7 +65,6 @@ def searchKeywords(keyword, data_dict):
             print("새로운 요소가 나타났습니다!")
             # 새로운 요소에 대한 작업 수행
             driver.find_element(By.CLASS_NAME, 'style-scope ytd-search-filter-renderer').click()
-
 
         soup = bs(driver.page_source, 'html.parser')
         for tag in soup.find_all('div', class_='style-scope ytd-item-section-renderer'):
