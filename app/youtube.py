@@ -106,3 +106,35 @@ for i in keyword:
     searchKeywords(i, content_total_dict).to_csv(csv_filename, index=True, index_label='row_data')
 
 print(f"데이터가 {csv_filename} 파일로 저장되었습니다.") 
+
+
+
+
+
+
+
+def get_url_list(driver, keyword, page_number):
+    links = []
+    link_count = 0  # 링크 개수 카운트 변수 초기화
+
+    for i in range(1, page_number + 1):
+        url = f'https://search.naver.com/search.naver?where=news&sm=tab_jum&query={keyword}&start={i}'
+        driver.get(url)
+        time.sleep(1)
+        soup = bs(driver.page_source, 'html.parser')
+        link_tags = soup.select('a.info')  # 클래스가 'info'인 모든 <a> 태그 선택
+        filtered_links = [link['href'] for j, link in enumerate(link_tags) if 'naver' in link['href']]
+        
+        # 새로운 링크를 현재 리스트에 추가하고 카운트 증가
+        links.extend(filtered_links)
+        link_count += len(filtered_links)
+        
+        # 링크 개수가 100개 이상이면 반복문 종료
+        if link_count >= 100:
+            break
+    
+    return links
+
+# 나머지 코드와 함수 호출 부분은 이전과 동일합니다
+
+위 코드에서는 링크 개수를 카운트하는 link_count 변수를 도입하고, 링크를 가져올 때마다 이를 증가시킵니다. 링크 개수가 100개 이상이 되면 break 문을 사용하여 반복문을 종료합니다. 이를 통해 100개 이상의 링크를 가져오는 것을 방지할 수 있습니다.
