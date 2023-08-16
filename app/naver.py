@@ -125,25 +125,3 @@ content_total_dict = {'내용': [], '상세내용': [], '주장/검증매체': [
 outCSV(df_snu['상세내용'], 5, 10)
 
 driver.quit()
-
-# for i in df_snu['상세내용']:
-#     temp = ast.literal_eval(i)
-#     keyword_list = get_top_n_frequencies(temp, 5)
-#     combine = ', '.join(keyword_list) # 키워드 묶어서 한줄로
-#     print(combine)
-    
-#     url_list = get_url_list(driver, combine, 5)
-#     print('\n')
-#     print(url_list)
-#     print('\n')
-#     for url in url_list:
-#         get_news_info(driver, url, content_total_dict)
-        
-#     df = pd.DataFrame(content_total_dict)
-#     df.to_csv('naver.csv', index=True, index_label='row_data')
-# url_list = ['https://search.naver.com/search.naver?where=news&sm=tab_jum&query=자살, 개탄, 금지, 화제, 생산&start=0']
-# print('\n')
-# print(url_list)
-# print('\n')
-# for url in url_list:
-#     get_news_info(driver, url, content_total_dict)
