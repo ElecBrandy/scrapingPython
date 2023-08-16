@@ -6,7 +6,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup as bs
 from youtube_transcript_api import YouTubeTranscriptApi
 import pandas as pd
-from tabulate import tabulate
 import time
 import re
 import os
@@ -42,7 +41,8 @@ def getSubtitle(ID):
         transcript_list = YouTubeTranscriptApi.list_transcripts(ID)
         # 한국어 (ko) 자막 가져오기
         korean_transcript = transcript_list.find_transcript(['ko']).fetch()
-        captions = [entry['text'] for entry in korean_transcript if '[음악]' not in entry['text']]
+        captions = [entry['text'] for entry in korean_transcript if '[음악]' not in entry['text'] and '[박수]' not in entry['text']]
+
     except Exception as e:
         return "0"
     return captions
@@ -54,16 +54,6 @@ def searchKeywords(keyword, data_dict):
         time.sleep(1)
         driver.find_element(By.CSS_SELECTOR, '.yt-spec-button-shape-next--icon-trailing > yt-touch-feedback-shape:nth-child(3) > div:nth-child(1)').click()
         time.sleep(5)
-
-        # ------------------------------------ ↓↓↓ 조회수 순 정렬 ↓↓↓ ------------------------------------ #
-        # 새로운 요소가 나타날 때까지 대기
-        wait = WebDriverWait(driver, 30)
-        new_element = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'tp-yt-paper-dialog.style-scope')))
-         # 새로운 요소가 나타나면 수행할 작업
-        if new_element.is_displayed():
-            print("새로운 요소가 나타났습니다!")
-            # 새로운 요소에 대한 작업 수행
-            driver.find_element(By.CLASS_NAME, 'style-scope ytd-search-filter-renderer').click()
 
         soup = bs(driver.page_source, 'html.parser')
         for tag in soup.find_all('div', class_='style-scope ytd-item-section-renderer'):
@@ -82,11 +72,14 @@ def searchKeywords(keyword, data_dict):
                 continue  # shorts가 포함된 링크인 경우 pass
             data_dict['link'].append('{}{}'.format('https://www.youtube.com', link_url))
             data_dict['내용'].append(title[i].text.strip())
-            data_dict['상세내용'].append(getSubtitle(link_url[len("/watch?v="):].split("&")[0]))
-            data_dict['view'].append(view[i].get('aria-label').split()[-2])
-            data_dict['스크립트 길이'].append(sum(len(caption) for caption in data_dict['상세내용'][i]))
-    
 
+            temp = getSubtitle(link_url[len("/watch?v="):].split("&")[0])
+            text = ""
+            for j in temp:
+                text = j + text
+            data_dict['상세내용'].append(text)
+            data_dict['view'].append(view[i].get('aria-label').split()[-2])
+    
         # 빈 열에 '0' 임시 처방
         for key in data_dict:
             if not data_dict[key]:
@@ -98,7 +91,7 @@ def searchKeywords(keyword, data_dict):
 csv_filename = 'output.csv'
 
 # 빈 딕셔너리 생성
-content_total_dict = {'주제': [], '내용': [], '상세내용': [], '주장/검증매체': [], 'label': [], 'link': [], 'view': [], 'upload_date': [], '스크립트 길이': []}
+content_total_dict = {'주제': [], '내용': [], '상세내용': [], '주장/검증매체': [], 'label': [], 'link': [], 'view': [], 'upload_date': []}
 
 keyword = ["탄소"]
 
@@ -106,35 +99,3 @@ for i in keyword:
     searchKeywords(i, content_total_dict).to_csv(csv_filename, index=True, index_label='row_data')
 
 print(f"데이터가 {csv_filename} 파일로 저장되었습니다.") 
-
-
-
-
-
-
-
-def get_url_list(driver, keyword, page_number):
-    links = []
-    link_count = 0  # 링크 개수 카운트 변수 초기화
-
-    for i in range(1, page_number + 1):
-        url = f'https://search.naver.com/search.naver?where=news&sm=tab_jum&query={keyword}&start={i}'
-        driver.get(url)
-        time.sleep(1)
-        soup = bs(driver.page_source, 'html.parser')
-        link_tags = soup.select('a.info')  # 클래스가 'info'인 모든 <a> 태그 선택
-        filtered_links = [link['href'] for j, link in enumerate(link_tags) if 'naver' in link['href']]
-        
-        # 새로운 링크를 현재 리스트에 추가하고 카운트 증가
-        links.extend(filtered_links)
-        link_count += len(filtered_links)
-        
-        # 링크 개수가 100개 이상이면 반복문 종료
-        if link_count >= 100:
-            break
-    
-    return links
-
-# 나머지 코드와 함수 호출 부분은 이전과 동일합니다
-
-위 코드에서는 링크 개수를 카운트하는 link_count 변수를 도입하고, 링크를 가져올 때마다 이를 증가시킵니다. 링크 개수가 100개 이상이 되면 break 문을 사용하여 반복문을 종료합니다. 이를 통해 100개 이상의 링크를 가져오는 것을 방지할 수 있습니다.

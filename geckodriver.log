@@ -7858,3 +7858,294 @@ JavaScript warning: https://static-nnews.pstatic.net/js/min/20230810a/prismplaye
 Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
 Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
 console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1692160715573	geckodriver	INFO	Listening on 127.0.0.1:39007
+1692160716086	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "44845" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile8PhJcr"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692160716437	Marionette	INFO	Marionette enabled
+1692160716440	Marionette	INFO	Listening on port 41815
+WebDriver BiDi listening on ws://localhost:44845
+Read port: 41815
+1692160716535	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8PhJcr/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:44845/devtools/browser/405f2959-7b76-4a09-a25b-88d08bd6c8b5
+[2023-08-16T04:38:39Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:38:39Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:38:39Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:38:39Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692160727114	Marionette	INFO	Stopped listening on port 41815
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1692160774277	geckodriver	INFO	Listening on 127.0.0.1:51277
+1692160774791	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "59011" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilefyinhc"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692160774991	Marionette	INFO	Marionette enabled
+1692160774994	Marionette	INFO	Listening on port 40425
+WebDriver BiDi listening on ws://localhost:59011
+Read port: 40425
+1692160775143	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilefyinhc/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:59011/devtools/browser/10e83295-3cc4-4aab-b555-72b2733d5d12
+[2023-08-16T04:39:37Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:39:37Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:39:37Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:39:37Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692160784826	Marionette	INFO	Stopped listening on port 40425
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1692161090300	geckodriver	INFO	Listening on 127.0.0.1:49131
+1692161090804	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "40551" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilefJSLe5"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692161090980	Marionette	INFO	Marionette enabled
+1692161090983	Marionette	INFO	Listening on port 39777
+WebDriver BiDi listening on ws://localhost:40551
+Read port: 39777
+1692161091041	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilefJSLe5/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:40551/devtools/browser/0de38c99-8b3d-40a4-8fee-80c223e27a09
+[2023-08-16T04:44:53Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:44:53Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:44:53Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:44:53Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692161100918	Marionette	INFO	Stopped listening on port 39777
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1692161356360	geckodriver	INFO	Listening on 127.0.0.1:42389
+1692161356878	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "40171" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileGPAfEE"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692161357086	Marionette	INFO	Marionette enabled
+1692161357089	Marionette	INFO	Listening on port 40525
+WebDriver BiDi listening on ws://localhost:40171
+Read port: 40525
+1692161357254	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileGPAfEE/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:40171/devtools/browser/6a507ddb-46c0-4087-975b-1014b1bc2655
+[2023-08-16T04:49:19Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:49:19Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:49:19Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:49:19Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692161366828	Marionette	INFO	Stopped listening on port 40525
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1692161471499	geckodriver	INFO	Listening on 127.0.0.1:51085
+1692161472010	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "56093" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileZCaHG3"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692161472218	Marionette	INFO	Marionette enabled
+1692161472220	Marionette	INFO	Listening on port 41239
+WebDriver BiDi listening on ws://localhost:56093
+Read port: 41239
+1692161472385	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZCaHG3/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:56093/devtools/browser/bfe0a0a9-9161-4296-ab8d-96106b70ac0a
+[2023-08-16T04:51:15Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:51:15Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:51:15Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:51:15Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692161482817	Marionette	INFO	Stopped listening on port 41239
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1692161590906	geckodriver	INFO	Listening on 127.0.0.1:34359
+1692161591416	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "55681" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileFyvdd9"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692161591616	Marionette	INFO	Marionette enabled
+1692161591618	Marionette	INFO	Listening on port 43691
+WebDriver BiDi listening on ws://localhost:55681
+Read port: 43691
+1692161591767	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileFyvdd9/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:55681/devtools/browser/4bd49e1b-f698-4949-a5d7-d9c573d0ff97
+[2023-08-16T04:53:14Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:53:14Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:53:14Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:53:14Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692161748617	geckodriver	INFO	Listening on 127.0.0.1:45881
+1692161749126	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "58307" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileO5uzJr"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692161749416	Marionette	INFO	Marionette enabled
+1692161749419	Marionette	INFO	Listening on port 35961
+WebDriver BiDi listening on ws://localhost:58307
+Read port: 35961
+1692161749491	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileO5uzJr/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:58307/devtools/browser/2a2aa826-e61a-4134-8c41-7728126eafb5
+[2023-08-16T04:55:52Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:55:52Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:55:52Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:55:52Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692161759696	Marionette	INFO	Stopped listening on port 35961
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1692161818674	geckodriver	INFO	Listening on 127.0.0.1:45357
+1692161819188	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "44477" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileFYjx64"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692161819436	Marionette	INFO	Marionette enabled
+1692161819439	Marionette	INFO	Listening on port 35893
+WebDriver BiDi listening on ws://localhost:44477
+Read port: 35893
+1692161819573	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileFYjx64/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:44477/devtools/browser/248c680e-96bb-48d9-b9ec-bff2375a51e8
+[2023-08-16T04:57:02Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:57:02Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:57:02Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:57:02Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692161829927	Marionette	INFO	Stopped listening on port 35893
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1692161928775	geckodriver	INFO	Listening on 127.0.0.1:59303
+1692161929285	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "49171" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileodxgXr"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692161929493	Marionette	INFO	Marionette enabled
+1692161929496	Marionette	INFO	Listening on port 35427
+WebDriver BiDi listening on ws://localhost:49171
+Read port: 35427
+1692161929648	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileodxgXr/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:49171/devtools/browser/66abd9d0-4b66-4c3c-aa12-f32d92b683c5
+[2023-08-16T04:58:52Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:58:52Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:58:52Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:58:52Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692161985714	geckodriver	INFO	Listening on 127.0.0.1:39331
+1692161986218	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "50771" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilemnr3AS"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692161986382	Marionette	INFO	Marionette enabled
+1692161986385	Marionette	INFO	Listening on port 34315
+WebDriver BiDi listening on ws://localhost:50771
+Read port: 34315
+1692161986445	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilemnr3AS/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:50771/devtools/browser/1cd4a3a9-28df-4f81-9783-42e80ac909d4
+[2023-08-16T04:59:49Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:59:49Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:59:49Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T04:59:49Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692161997002	Marionette	INFO	Stopped listening on port 34315
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1692162359267	geckodriver	INFO	Listening on 127.0.0.1:59039
+1692162359780	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "43693" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileSn4T1k"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692162359984	Marionette	INFO	Marionette enabled
+1692162359986	Marionette	INFO	Listening on port 42505
+WebDriver BiDi listening on ws://localhost:43693
+Read port: 42505
+1692162360139	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileSn4T1k/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:43693/devtools/browser/32407daf-da75-4594-b015-59f607e26fe5
+[2023-08-16T05:06:02Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T05:06:02Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T05:06:02Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T05:06:02Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692162369380	Marionette	INFO	Stopped listening on port 42505
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1692162643111	geckodriver	INFO	Listening on 127.0.0.1:52275
+1692162643622	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "56167" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileWdV2xv"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692162643830	Marionette	INFO	Marionette enabled
+1692162643832	Marionette	INFO	Listening on port 34269
+WebDriver BiDi listening on ws://localhost:56167
+Read port: 34269
+1692162643990	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileWdV2xv/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:56167/devtools/browser/24f827dd-4830-45c8-a27c-b56d7ea8b356
+[2023-08-16T05:10:46Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T05:10:46Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T05:10:46Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T05:10:46Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692162653536	Marionette	INFO	Stopped listening on port 34269
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1692162695925	geckodriver	INFO	Listening on 127.0.0.1:48937
+1692162696427	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "43193" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileDmrjyP"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+1692162696593	Marionette	INFO	Marionette enabled
+1692162696595	Marionette	INFO	Listening on port 44249
+WebDriver BiDi listening on ws://localhost:43193
+Read port: 44249
+1692162696653	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileDmrjyP/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:43193/devtools/browser/510e9886-5976-45d8-a01f-2011e48f15d1
+[2023-08-16T05:11:39Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T05:11:39Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T05:11:39Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-16T05:11:39Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1692162706653	Marionette	INFO	Stopped listening on port 44249
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
