@@ -30,19 +30,6 @@ driver = webdriver.Firefox(options=options)
 
 
 # ------------------------------------ ↓↓↓ 함수 설정 ↓↓↓ ------------------------------------ #
-def combine_intermediate_csv(num_files):
-    intermediate_dfs = []
-    for i in range(1, num_files + 1):
-        intermediate_df = pd.read_csv(f'intermediate_{i}.csv')
-        intermediate_dfs.append(intermediate_df)
-
-    final_df = pd.concat(intermediate_dfs, ignore_index=True)
-    final_df.to_csv('naver.csv', index=True, index_label='row_data')
-
-    # 더 이상 필요하지 않은 중간 파일 삭제
-    for i in range(1, num_files + 1):
-        os.remove(f'intermediate_{i}.csv')
-
 
 def get_top_n_frequencies(input_list, n):
     frequency_counter = Counter(input_list)  # 각 요소의 빈도수 계산
@@ -122,33 +109,25 @@ def get_news_info(driver, url, data_dict):
 # topNum -> 상위 몇개의 키워드를 사용할 것인지
 # newsNum -> 키워드로 검색해 몇개의 기사를 가져올 것인지
 def outCSV(csvColum, topNum, newsNum):
-    chunk_size = 100  # 100행마다 끊어서 처리
-    start_idx = 0
-    
-    while start_idx < len(csvColum):
-        end_idx = start_idx + chunk_size
-        chunk = csvColum[start_idx:end_idx]
+    for i in csvColum:
+        temp = ast.literal_eval(i)
+        keyword_list = get_top_n_frequencies(temp, topNum)
+        print(keyword_list)
+        combine = ', '.join(keyword_list) # 키워드 묶어서 한줄로
+        print(combine)
         
-        for i in chunk:
-            temp = ast.literal_eval(i)
-            keyword_list = get_top_n_frequencies(temp, topNum)
-            print(keyword_list)
-            combine = ', '.join(keyword_list) # 키워드 묶어서 한줄로
-            print(combine)
+        url_list = get_url_list(driver, combine, newsNum)
+        print('\n')
+        print(url_list)
+        print('\n')
+        for url in url_list:
+            get_news_info(driver, url, content_total_dict)
 
-            url_list = get_url_list(driver, combine, newsNum)
-            print('\n')
-            print(url_list)
-            print('\n')
-            for url in url_list:
-                get_news_info(driver, url, content_total_dict)
+        
+    df = pd.DataFrame(content_total_dict)
+    df.to_csv('naver.csv', index=True, index_label='row_data')
 
-        # 중간 결과를 저장
-        save_to_intermediate_csv(content_total_dict, start_idx // chunk_size + 1)
-        start_idx = end_idx
-    
-    # 중간 결과를 병합하여 최종 CSV 파일로 저장
-    combine_intermediate_csv(start_idx // chunk_size)
+    return True
 # ------------------------------------ ↑↑↑ 함수 설정 ↑↑↑ ------------------------------------ #
 
 
