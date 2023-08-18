@@ -78,9 +78,9 @@ def get_news_info(driver, url, data_dict):
     driver.get(url)
     time.sleep(1)
     soup = bs(driver.page_source, 'html.parser')
-    title = soup.select_one("#title_area > span")
+    title = soup.select("#title_area > span")
     main = soup.select("#dic_area")
-    press = soup.select_one("em.media_end_linked_more_point")
+    press = soup.select("em.media_end_linked_more_point")
     
     print("기사내용")
     if title != None:
